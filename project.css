@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #3D54A1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:#193263;
+    scroll-behavior: smooth;
+}
+
+header{
+    width: 100%;
+    padding: 10px 0;
+}
+
+header .general-header{
+    width: 100%;
+    background-color: #fff;
+}
+
+header .general-header .top-navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+header .top-navbar .header-logo{
+    padding-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .top-navbar .header-logo img{
+    width: 100%;
+    object-fit: contain;
+    max-width: 400px;
+}
+header .top-navbar .top-navbar-right{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .top-navbar-right .icons-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+header .icons-navbar .social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .icons-navbar .social-icons{
+    border-right: 1px solid #193263;
+}
+header .icons-navbar .social-icons a{
+    color:#193263;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 10px;
+}
