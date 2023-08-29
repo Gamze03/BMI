@@ -50,13 +50,23 @@ if (document.querySelector(".counter-span")) {
 }
 
 
-let bottomNav = document.querySelector('.links-wrapper');
-// let navPixel = bottomNav.offsetTop;
+// let bottomNav = document.querySelector('.links-wrapper');
+// // let navPixel = bottomNav.offsetTop;
 
-window.addEventListener('scroll', function(){
-    if(this.scrollY > 200){
-        linksWrapper.classList.add('fixed-top')
-    }else{
-      linksWrapper.classList.remove('fixed-top');
-    }
-})
+// window.addEventListener('scroll', function(){
+//     if(this.scrollY > 200){
+//         linksWrapper.classList.add('fixed-top')
+//     }else{
+//       linksWrapper.classList.remove('fixed-top');
+//     }
+// })
+
+let shareButton = document.querySelectorAll(".share-button");
+let hideIcon = document.querySelectorAll(".hide-icon");
+
+shareButton.forEach((btn, index) => {
+  btn.addEventListener('click',function(){
+    hideIcon[index].classList.toggle('d-none');
+  })
+}
+)

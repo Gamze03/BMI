@@ -19,3 +19,50 @@ const BannerSwiper = new Swiper(".banner-swiper", {
     // }
     }
 });
+
+const TrainersSwiper = new Swiper(".trainers-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1000,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+
+        },
+    }
+    }
+);
+
+
+const NewsSwiper = new Swiper(".news-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1000,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+
+        },
+    }
+    }
+);
