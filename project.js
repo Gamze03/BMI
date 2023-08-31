@@ -70,3 +70,31 @@ shareButton.forEach((btn, index) => {
   })
 }
 )
+
+
+
+if (document.querySelector('.gallery-buttons')) {
+  let galleryButtons = document.querySelectorAll('.gallery-buttons button');
+  let galleryWrapper = document.querySelectorAll('.gallery-wrapper');
+
+  galleryButtons[0].classList.add('active');
+  galleryWrapper[0].classList.remove('d-none');
+
+  galleryButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      let category = button.getAttribute('data-category');
+      // buttona active class elave etmek
+      for (let i = 0; i < galleryButtons.length; i++) {
+        galleryButtons[i].classList.remove('active');
+      }
+      button.classList.add('active');
+
+      // aktiv konteyneri acmaq
+      for (let i = 0; i < galleryWrapper.length; i++) {
+        galleryWrapper[i].classList.add('d-none');
+      }
+      let activeWrapper = Array.from(galleryWrapper).find((container) => container.getAttribute('data-category') === category);
+      activeWrapper.classList.remove('d-none');
+    })
+  })
+}
