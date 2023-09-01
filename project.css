@@ -699,16 +699,13 @@ section.counter .counters-wrapper {
 
 }
 
-@media only screen and (min-width:1200px) {
-    section.counter .counters-wrapper {
-        justify-content: space-between;
-        flex-wrap: nowrap;
-    }
-}
+
 
 @media only screen and (min-width:576px) {
     section.counter .counters-wrapper {
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 }
 
@@ -1028,7 +1025,7 @@ section.events .event-card .poster {
     object-fit: cover;
 }
 
-section.events .event-card .hover-div{
+section.events .event-card .hover-div {
     position: absolute;
     top: 0;
     left: 0;
@@ -1057,12 +1054,12 @@ section.events .event-card .event-button {
 @keyframes event {
     0% {
         transform: translateY(-100px);
-       
+
     }
 
     100% {
         transform: translateY(0);
-    
+
     }
 }
 
@@ -1075,7 +1072,7 @@ section.events .event-card:hover .event-button {
 }
 
 
-section.events .event-card .logo{
+section.events .event-card .logo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -1084,7 +1081,7 @@ section.events .event-card .logo{
     object-fit: contain;
 }
 
- /* section.events .event-card::after .event-button{
+/* section.events .event-card::after .event-button{
     content: '';
     position: absolute;
     top: 0;
@@ -1110,7 +1107,7 @@ section.events .event-card:hover .event-button{
 } */
 
 
-section.news .news-card{
+section.news .news-card {
     width: 100%;
     max-width: 370px;
     display: flex;
@@ -1122,21 +1119,21 @@ section.news .news-card{
     border-radius: 5px;
 }
 
-section.news .news-card .image{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+section.news .news-card .image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-section.news .news-card .image img{
-       width: 100%;
-       min-height: 200px;
-       max-height: 270px;
-       object-fit: cover; 
+section.news .news-card .image img {
+    width: 100%;
+    min-height: 200px;
+    max-height: 270px;
+    object-fit: cover;
 }
 
-section.news .content{
+section.news .content {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1145,13 +1142,13 @@ section.news .content{
     margin-top: 10px;
 }
 
-section.news .content span.header{
+section.news .content span.header {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
-section.news .content .news-button{
+section.news .content .news-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1165,12 +1162,12 @@ section.news .content .news-button{
     border-radius: 5px;
 }
 
-section.news .news-card:hover{
-  box-shadow: 0 0 5px #193263;
-  transition: all .2s;
+section.news .news-card:hover {
+    box-shadow: 0 0 5px #193263;
+    transition: all .2s;
 }
 
-section.trainings{
+section.trainings {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1180,26 +1177,21 @@ section.trainings{
 
 
 
-section.trainings .trainings-wrapper{
+section.trainings .trainings-wrapper {
     background-color: #193263;
-    padding: 30px 20px ;
+    padding: 30px 20px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
 }
-@media only screen and (max-width:768px) {
-    section.trainings .trainings-wrapper .item{
-        width: 19.5%;
-    
-}
-}
-section.trainings .trainings-wrapper .item{
-    width: 100%;
-    max-width: 300px;
-    
-}   
-section.trainings  .item .trainings-card{
+
+
+
+
+section.trainings .trainings-card {
     position: relative;
     width: 100%;
     min-width: 150px;
@@ -1211,7 +1203,7 @@ section.trainings  .item .trainings-card{
     flex-direction: row;
 }
 
-section.trainings  .trainings-card .card-bg{
+section.trainings .trainings-card .card-bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1220,13 +1212,14 @@ section.trainings  .trainings-card .card-bg{
 
 }
 
-section.trainings  .card-bg img{
+section.trainings .card-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
-section.trainings .card-bg .black-hover{
+
+section.trainings .card-bg .black-hover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1236,7 +1229,7 @@ section.trainings .card-bg .black-hover{
     border-radius: 10px;
 }
 
-section.trainings .trainings-card .content{
+section.trainings .trainings-card .content {
     position: absolute;
     top: 0;
     left: 0;
@@ -1249,75 +1242,75 @@ section.trainings .trainings-card .content{
     padding: 15px 12px;
 }
 
-section.trainings .content .header{
+section.trainings .content .header {
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
-section.trainings  .header .badge{
+section.trainings .header .badge {
     background-color: #d8353a;
-    border-radius:5px ;
+    border-radius: 5px;
     padding: 8px 13px;
     padding-right: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
-    
+
 }
 
-section.trainings  .header .blue-badge{
+section.trainings .header .blue-badge {
     background-color: #193263;
 }
 
-section.trainings  .header .blue-badge span.offline{
+section.trainings .header .blue-badge span.offline {
     color: #fff;
-   
+
 }
 
-section.trainings .badge img{
+section.trainings .badge img {
     margin-right: 7px;
 }
 
-section.trainings .blue-badge img{
+section.trainings .blue-badge img {
     margin-right: 7px;
 }
 
-section.trainings .header span.name{
+section.trainings .header span.name {
     font-size: 18px;
     color: #fff;
     font-weight: 600;
     position: relative;
 }
 
-section.trainings .header span.name::after{
-     content: '';
-     position: absolute;
-     top: 60px;
-     left: 0;
-     bottom: -10px;
-     width: 70px;
-     height: 4px;
-     background-color: #d8353a;
+section.trainings .header span.name::after {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: -10px;
+    width: 70px;
+    height: 4px;
+    background-color: #d8353a;
 }
 
-section.trainings .header span.type{
+section.trainings .header span.type {
     color: #fff;
     font-weight: 500;
     margin-top: 25px;
 }
 
-section.trainings .footer{
+section.trainings .footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-section.trainings .footer button{
+section.trainings .footer button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1331,40 +1324,42 @@ section.trainings .footer button{
     font-size: 14px;
 }
 
-section.trainings .footer button.details{
+section.trainings .footer button.details {
     background-color: #193263;
     margin-right: 10px;
     font-size: 16px;
 }
-section.trainings .footer button.register{
+
+section.trainings .footer button.register {
     border-color: #fff;
     background-color: transparent;
 }
 
 section.trainings .trainings-card.offline .badge .online-icon,
-section.trainings .trainings-card.offline .badge .online{
+section.trainings .trainings-card.offline .badge .online {
     display: none;
 }
 
 section.trainings .trainings-card .badge .offline-icon,
-section.trainings .trainings-card .badge .offline{
+section.trainings .trainings-card .badge .offline {
     display: none;
 }
 
-section.trainings .trainings-card.offline .badge{
+section.trainings .trainings-card.offline .badge {
     background-color: #193263;
 }
+
 section.trainings .trainings-card.offline .badge .online-icon,
-section.trainings .trainings-card.offline .badge .online{
+section.trainings .trainings-card.offline .badge .online {
     display: none;
 }
 
 section.trainings .trainings-card.offline .badge .offline-icon,
-section.trainings .trainings-card.offline .badge .offline{
+section.trainings .trainings-card.offline .badge .offline {
     display: inline-block;
 }
 
-section.trainings .trainings-card.offline span.name::after{
+section.trainings .trainings-card.offline span.name::after {
     content: '';
     position: absolute;
     top: 60px;
@@ -1375,12 +1370,13 @@ section.trainings .trainings-card.offline span.name::after{
     background-color: #193263;
 }
 
-section.trainings .swiper-slide .trainings-card{
+section.trainings .swiper-slide .category-card {
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px;
+    margin-top: 30px;
 }
 
-section.trainings .swiper-slide .trainings-card .image{
+section.trainings .swiper-slide .category-card .image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1390,22 +1386,139 @@ section.trainings .swiper-slide .trainings-card .image{
 }
 
 @media only screen and (min-width:992px) {
-    section.trainings .swiper-slide .trainings-card .image{
+    section.trainings .swiper-slide .category-card .image {
         margin-bottom: 0;
         height: 100%;
-    
-}
+
+    }
 }
 
-section.trainings .swiper-slide .trainings-card .image img{
+section.trainings .swiper-slide .category-card .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     min-height: 200px;
+    border-radius: 10px;
 }
 
 
-section.gallery .gallery-buttons{
+section.trainings .category-card .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 700px;
+    padding: 0 15px;
+}
+
+
+@media only screen and (min-width:576px) {
+    section.trainings .category-card .content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0 35px;
+
+    }
+}
+
+section.trainings .content .badge {
+    background-color: #d8353a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px 15px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+section.trainings .category-card.offline .badge .online-icon,
+section.trainings .category-card.offline .badge .online {
+    display: none;
+}
+
+section.trainings .category-card .badge .offline-icon,
+section.trainings .category-card .badge .offline {
+    display: none;
+}
+
+section.trainings .category-card.offline .badge {
+    background-color: #3D54A1;
+}
+
+section.trainings .category-card.offline .badge .online-icon,
+section.trainings .category-card.offline .badge .online {
+    display: none;
+}
+
+section.trainings .category-card.offline .badge .offline-icon,
+section.trainings .category-card.offline .badge .offline {
+    display: inline-block;
+}
+
+section.trainings .content .header {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+}
+
+@media only screen and (min-width:576px) {
+    section.trainings .content .header {
+        text-align: start;
+    }
+}
+
+section.trainings .category-card .content .header::after {
+    content: '';
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+
+@media only screen and (min-width:576px) {
+    section.trainings .category-card .content .header::after {
+        width: 70px;
+    }
+}
+
+section.trainings .content .training-name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+@media only screen and (min-width:576px) {
+    section.trainings .content .training-name {
+        text-align: start;
+    }
+}
+
+section.trainings .content .training-text {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+@media only screen and (min-width:576px) {
+    section.trainings .content .training-text {
+        text-align: start;
+    }
+}
+
+
+section.trainings .content .training-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1414,13 +1527,83 @@ section.gallery .gallery-buttons{
 }
 
 @media only screen and (min-width:576px) {
-    section.gallery .gallery-buttons{
+    section.trainings .content .training-buttons {
         flex-direction: row;
-    
-}
+    }
 }
 
-section.gallery .gallery-buttons button{
+section.trainings .training-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 5px;
+    border: 2px solid transparent;
+
+}
+
+section.trainings .training-buttons a.details {
+    background-color: #3D54A1;
+    margin-bottom: 15px;
+
+}
+
+@media only screen and (min-width:576px) {
+    section.trainings .training-buttons a.details {
+        background-color: #3D54A1;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+}
+
+section.trainings .training-buttons a.register {
+    border-color: #fff;
+    background-color: transparent;
+}
+
+.trainings-swiper{
+    padding-bottom: 60px;
+}
+.swiper-pagination {
+    bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #ECEEF6;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+
+
+section.gallery .gallery-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media only screen and (min-width:576px) {
+    section.gallery .gallery-buttons {
+        flex-direction: row;
+
+    }
+}
+
+section.gallery .gallery-buttons button {
     padding: 15px;
     min-width: 150px;
     width: 100%;
@@ -1434,21 +1617,22 @@ section.gallery .gallery-buttons button{
 }
 
 @media only screen and (min-width:576px) {
-    section.gallery .gallery-buttons button{
+    section.gallery .gallery-buttons button {
         margin-bottom: 0;
         margin-right: 15px;
-}
+    }
 }
 
-section.gallery .gallery-buttons button.active{
+section.gallery .gallery-buttons button.active {
     color: #fff;
     background-color: #193263;
 }
 
-section.gallery .gallery-wrapper.active{
+section.gallery .gallery-wrapper.active {
     display: flex;
 }
-section.gallery .gallery-wrapper{
+
+section.gallery .gallery-wrapper {
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -1456,15 +1640,15 @@ section.gallery .gallery-wrapper{
 
 }
 
-section.gallery .row{
+section.gallery .row {
     width: 100%;
 }
 
-section.gallery .foto-row .col-12{
+section.gallery .foto-row .col-12 {
     padding: 0;
 }
 
-section.gallery .col-12 .image{
+section.gallery .col-12 .image {
     width: 100%;
     height: 100%;
     min-height: 200px;
@@ -1472,7 +1656,7 @@ section.gallery .col-12 .image{
     position: relative;
 }
 
-section.gallery .col-12 .image img{
+section.gallery .col-12 .image img {
     width: 100%;
     height: 100%;
     min-height: 200px;
@@ -1480,7 +1664,7 @@ section.gallery .col-12 .image img{
     object-fit: cover;
 }
 
-section.gallery .col-12  .hover-div{
+section.gallery .col-12 .hover-div {
     position: absolute;
     top: 0;
     left: 0;
@@ -1492,7 +1676,7 @@ section.gallery .col-12  .hover-div{
     justify-content: center;
 }
 
-section.gallery .hover-div .foto-button{
+section.gallery .hover-div .foto-button {
     padding: 15px;
     min-width: 150px;
     border: 2px solid #fff;
@@ -1504,19 +1688,19 @@ section.gallery .hover-div .foto-button{
     font-weight: 600;
     color: #fff;
     opacity: 0;
-    
+
 }
 
 @keyframes gallery-foto {
 
     0% {
         transform: translateY(-100px);
-       
+
     }
 
     100% {
         transform: translateY(0);
-    
+
     }
 }
 
@@ -1528,7 +1712,7 @@ section.gallery .image:hover .foto-button {
 
 }
 
-section.gallery .video-row .col-12{
+section.gallery .video-row .col-12 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1536,14 +1720,14 @@ section.gallery .video-row .col-12{
 }
 
 
-section.gallery .video-row .video{
+section.gallery .video-row .video {
     width: 100%;
     max-width: 350px;
     min-height: 200px;
     position: relative;
 }
 
-section.gallery .col-12 .video img{
+section.gallery .col-12 .video img {
     width: 100%;
     height: 100%;
     min-height: 200px;
@@ -1551,7 +1735,7 @@ section.gallery .col-12 .video img{
     object-fit: cover;
 }
 
-section.gallery .video-button{
+section.gallery .video-button {
     width: 55px;
     height: 55px;
     display: flex;
@@ -1562,13 +1746,13 @@ section.gallery .video-button{
     color: #fff;
 }
 
-section.clients .swiper-slide img{
+section.clients .swiper-slide img {
     width: 170px;
     height: 150px;
     object-fit: contain;
 }
 
-section.partners .partners-container{
+section.partners .partners-container {
     width: 100%;
     padding: 20px 0;
     background-color: #f8f8f8;
@@ -1597,21 +1781,21 @@ section.partners .partners-container{
     color: #193263;
 }
 
-.swiper-button-next{
+.swiper-button-next {
     right: 0;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
     left: 0;
 }
 
-section.form{
+section.form {
     background-color: #ECEEF6;
     padding: 30px 0;
     margin-bottom: 0;
 }
 
-section.form .form-general{
+section.form .form-general {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1619,11 +1803,12 @@ section.form .form-general{
     justify-content: center;
 }
 
-section.form .form-general .row{
+section.form .form-general .row {
     width: 100%;
 
 }
-section.form .form-general .form-item{
+
+section.form .form-general .form-item {
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -1633,11 +1818,11 @@ section.form .form-general .form-item{
 
 }
 
-section.form .form-item label{
+section.form .form-item label {
     padding: 5px 8px;
 }
 
-section.form .form-select{
+section.form .form-select {
     display: block;
     width: 100%;
     font-size: 1rem;
@@ -1649,7 +1834,7 @@ section.form .form-select{
     padding: 12px;
 }
 
-section.form .form-control{
+section.form .form-control {
     display: block;
     font-size: 1rem;
     line-height: 1.5;
@@ -1665,7 +1850,7 @@ section.form .form-control{
 
 }
 
-section.form .form-submit-button{
+section.form .form-submit-button {
     padding: 15px 5px;
     margin: 15px 0;
     color: #fff;
@@ -1678,6 +1863,21 @@ section.form .form-submit-button{
     width: 100%;
 }
 
-section.form .form-control:focus{
-   border-color: #193263;
+section.form .form-control:focus {
+    border-color: #193263;
+}
+
+footer{
+    background-color: #202f3f;
+}
+
+footer .footer-top{
+    padding: 40px 0;
+}
+
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
 }
