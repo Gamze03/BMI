@@ -37,6 +37,24 @@ body {
     scroll-behavior: smooth;
 }
 
+.page-scroll-button{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3D54A1;
+    color: #fff;
+    box-shadow: 0 0 10px #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 999;
+}
+
 header {
     width: 100%;
     padding: 10px 0;
@@ -54,13 +72,6 @@ header .general-header .top-navbar {
     justify-content: space-between;
     padding: 10px 0;
 }
-
-/* @media only screen and (min-width:992px) {
-    header .top-navbar {
-        justify-content: space-between;
-    }
-    
-} */
 
 
 
@@ -98,7 +109,7 @@ header .top-navbar-right .icons-navbar {
     padding: 15px 0;
 }
 
-header .icons-navbar .social-icons {
+ .social-icons {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1081,7 +1092,7 @@ section.events .event-card .logo {
     object-fit: contain;
 }
 
-/* section.events .event-card::after .event-button{
+/* section.events .event-button::after {
     content: '';
     position: absolute;
     top: 0;
@@ -1089,21 +1100,22 @@ section.events .event-card .logo {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    border: 1px solid #fff;
+    border: 1px solid #193263;
     transform: scale(1.3);
     opacity: 0;
     transition: all 0.3s;
 
 }
 
-section.events .event-card:hover .event-button::after {
+section.events .event-button:hover::after {
     transform: scale(1);
     opacity: 1;
 }
 
-section.events .event-card:hover .event-button{
-    color:#fff;
+section.events .event-button:hover{
+    color:#193263;
     transition: all 0.3s;
+    background-color: #fff;
 } */
 
 
@@ -1175,8 +1187,6 @@ section.trainings {
     width: 100%;
 }
 
-
-
 section.trainings .trainings-wrapper {
     background-color: #193263;
     padding: 30px 20px;
@@ -1187,9 +1197,6 @@ section.trainings .trainings-wrapper {
     flex-direction: column;
 
 }
-
-
-
 
 section.trainings .trainings-card {
     position: relative;
@@ -1634,6 +1641,7 @@ section.gallery .gallery-wrapper.active {
 
 section.gallery .gallery-wrapper {
     width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 30px 0;
@@ -1881,3 +1889,72 @@ footer .footer-logo{
     justify-content: center;
     margin-bottom: 15px;
 }
+
+footer .footer-logo img{
+    object-fit: contain;
+    color: #fff;
+}
+
+footer .footer-links{
+    padding: 15px 0;
+}
+
+footer .footer-links h4{
+    color: #fff;
+    font-weight: 700
+}
+
+footer .footer-links a{
+    color: #fff;
+    font-weight: 500;
+    margin: 5px 0;
+    font-size: 16px;
+    position: relative;
+}
+
+footer .contact{
+    padding: 10px 0;
+}
+
+footer .contact a span:first-child{
+    padding: 0 7px;
+}
+
+footer  .social-icons a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+ footer .footer-links a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+    width: 100%;
+    height: 1px;
+    transition: all .3s;
+    transform: scaleX(0);
+    background-color: transparent;
+}
+footer .footer-links a:hover::after{
+    background-color: #fff;
+    transform: scaleX(1);
+}
+
+footer .footer-bottom{
+    width: 100%;
+    padding: 25px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #193263;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+

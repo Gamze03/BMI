@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="shortcut icon" href="./bmi-image/logo/2x/iconbig.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="project.css">
+
+</head>
+
+<body>
+    <button class="page-scroll-button">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <header>
+        <div class="general-header">
+            <div class="container">
+                <div class="top-navbar">
+                    <div class="top-navbar-left">
+                        <a class="header-logo">
+                            <img src="./bmi-image/logo/2x/verticalbig.png" alt="">
+                        </a>
+                    </div>
+                    <div class="top-navbar-right d-none d-lg-flex">
+                        <div class="icons-navbar">
+                            <div class="social-icons">
+                                <a href="">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+
+                                <a href="">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+
+                                <a href="">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </div>
+
+                            <div class="contact">
+                                <a href="">
+                                    <span>
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <span>info@gmail.com</span>
+                                </a>
+                            </div>
+
+                            <div class="contact">
+                                <a href="">
+                                    <span> <i class="fa-solid fa-phone"></i>
+                                    </span>
+
+                                    <span>
+                                        +994 50 999 99 99
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="search-bottom">
+                            <div class="lang-dropdown">
+                                <div class="dropdown">
+                                    <button class="dropdown-button" type="button" data-bs-toggle="dropdown">
+                                        <span>AZ</span>
+                                        <i class="fa-solid fa-chevron-down"> </i>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="/">EN</a>
+                                        <a class="dropdown-item" href="/">RU</a>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <div class="search-box">
+                                <form action="/">
+                                    <input type="text" placeholder="Axtar">
+                                    <button>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mobile-right d-lg-none">
+                        <button class="search-button d-lg-none" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasTop"> <i class="fa-solid fa-magnifying-glass"></i>
+
+                        </button>
+
+                        <button class="menu-button d-lg-none" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight"> <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="bottom-navbar d-none d-lg-flex">
+                    <div class="container">
+                        <div class="inner d-flex">
+                            <div class="links-wrapper">
+                                <a class="active" href="">Ana Səhifə</a>
+                                <a href="">Haqqımızda</a>
+                                <a href="">Təlimlər</a>
+                                <a href="">Təlimçilər</a>
+                                <a href="">Forumlar</a>
+                                <a href="">Xəbərlər</a>
+                                <a href="">Bizimlə əlaqə</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <a class="header-logo" href="">
+                    <img src="./bmi-image/logo/white-logo/vertical.svg" alt="">
+                </a>
+
+                <button type="button" class="close-button" data-bs-dismiss="offcanvas">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="links-wrapper">
+                    <a class="active" href="">Ana Səhifə</a>
+                    <a href="">Haqqımızda</a>
+                    <a href="">Təlimlər</a>
+                    <a href="">Təlimçilər</a>
+                    <a href="">Forumlar</a>
+                    <a href="">Xəbərlər</a>
+                    <a href="">Bizimlə əlaqə</a>
+
+
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                        aria-expanded="false">
+                        AZ
+                    </a>
+
+                    <div class="collapse" id="collapseExample">
+                        <div class="links-wrapper">
+                            <a href="">EN</a>
+                            <a href="">RU</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="icons-wrapper">
+                    <div class="contact-icons">
+                        <a href="">
+                            <span>
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <span>
+                                info@gmail.com
+                            </span>
+                        </a>
+
+                        <a href="">
+                            <span>
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <span>
+                                +994 50 999 99 99
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="search-input">
+                                <input type="text" class="form-control" placeholder="Axtar">
+                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+
+                        </div>
+
+                        <div class="col-2">
+                            <button type="button" class="close-button" data-bs-dismiss="offcanvas">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-top d-flex flex-column align-items-center flex-lg-row">
+                <div class="footer-logo">
+                    <a href="">
+                        <img class="w-100" src="./bmi-image/logo/white-logo/text icon.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="row w-100">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <div class="footer-links d-flex flex-column align-items-center align-items-md-start">
+                            <h4>Menyular</h4>
+                            <a href="">Haqqımzda</a>
+                            <a href="">Təlimlər</a>
+                            <a href="">Təlimçilər</a>
+                            <a href="">Forumlar</a>
+                            <a href="">Xəbərlər</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <div class="footer-links d-flex flex-column align-items-center align-items-md-start">
+                            <h4>Faydalı linklər</h4>
+                            <a href="">Tez-tez soruşulanlar</a>
+                            <a href="">Karyera</a>
+                            <a href="">Xidmət şəbəkəsi</a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <div class="footer-links d-flex flex-column align-items-center align-items-md-start">
+                            <h4>Əlaqə</h4>
+                            <div class="contact">
+                                <a href="">
+                                    <span>
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+
+                                    <span>info@gmail.com</span>
+                                </a>
+                            </div>
+
+                            <div class="contact">
+                                <a href="">
+                                    <span>
+                                        <i class="fa-solid fa-phone"></i>
+                                    </span>
+
+                                    <span>+994 50 999 99 99</span>
+                                </a>
+                            </div>
+
+                            <div class="social-icons">
+                                <a href="">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2022. Business Management Institute</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="project.js"></script>
+    <script src="swiper.js"></script>
+</body>
+
+</html>
