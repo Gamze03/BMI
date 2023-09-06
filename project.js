@@ -105,3 +105,31 @@ scrollButton.addEventListener("click", () => {
 
 
 
+if(document.querySelector('.training-gridder')){
+  const gridItem = document.querySelectorAll('.training-gridder .grid-item');
+  const gridContent = document.querySelectorAll('.training-gridder .grid-content');
+
+  gridItem.forEach((item) => {
+    item.addEventListener('click', function(){
+      let itemID = item.getAttribute('data-id');
+      for(let i = 0; i < gridContent.length; i++){
+        gridContent[i].classList.remove('open')
+      }
+      let activeContent = Array.from(gridContent).find((content) => content.getAttribute('data-id') == itemID);
+      if(activeContent){
+        activeContent.classList.toggle('open')
+      }
+    })
+  })
+}
+
+const buttonClose = document.querySelectorAll('.training-gridder .button-close');
+const gridContent = document.querySelectorAll('.training-gridder .grid-content');
+
+  buttonClose.forEach((item) => {
+    item.addEventListener('click', function(){
+      for(let i = 0; i < gridContent.length; i++){
+        gridContent[i].classList.remove('open')
+      }
+    })
+  })
