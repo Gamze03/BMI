@@ -90,18 +90,18 @@ if (document.querySelector('.gallery-buttons')) {
 }
 
 
-let scrollButton = document.querySelector(".page-scroll-button");
-window.addEventListener("scroll", function () {
-    if (this.scrollY > 300) {
-        scrollButton.classList.remove("d-none");
-    } else {
-        scrollButton.classList.add("d-none");
-    }
-});
+// let scrollButton = document.querySelector(".page-scroll-button");
+// window.addEventListener("scroll", function () {
+//     if (this.scrollY > 300) {
+//         scrollButton.classList.remove("d-none");
+//     } else {
+//         scrollButton.classList.add("d-none");
+//     }
+// });
 
-scrollButton.addEventListener("click", () => {
-    window.scrollTo(0, 0);
-});
+// scrollButton.addEventListener("click", () => {
+//     window.scrollTo(0, 0);
+// });
 
 
 
@@ -133,3 +133,39 @@ const gridContent = document.querySelectorAll('.training-gridder .grid-content')
       }
     })
   })
+
+  if(document.querySelectorAll('.page-button')){
+    let pageButtons = document.querySelectorAll('.page-button');
+  
+    pageButtons.forEach((button) => {
+      button.addEventListener('click', function(){
+        for (let i = 0; i < pageButtons.length; i++){
+          pageButtons[i].classList.remove("active");
+        }
+        button.classList.add("active");
+    })
+  })
+  }
+
+
+  let bottomNav = document.querySelector(".bottom-navbar");
+let topNav = document.querySelector(".top-navbar");
+let fixNavLogo = document.querySelector('.header-bottom-logo');
+let scrollButton = document.querySelector(".page-scroll-button");
+window.addEventListener("scroll", function () {
+  if (this.scrollY > 300) {
+    bottomNav.classList.add("fixed-top");
+    topNav.classList.add("fixed-top");
+    fixNavLogo.classList.remove('d-none')
+    scrollButton.classList.remove("d-none");
+  } else {
+    bottomNav.classList.remove("fixed-top");
+    topNav.classList.remove("fixed-top");
+    fixNavLogo.classList.add('d-none')
+    scrollButton.classList.add("d-none");
+  }
+});
+
+scrollButton.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
